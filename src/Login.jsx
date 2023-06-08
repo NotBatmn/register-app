@@ -3,7 +3,8 @@ import { useState } from "react";
 import { createPortal } from "react-dom";
 import Modal from "./Modal";
 
-//figure out the long way to do this cuz I like it better
+//simple login app validates username and password, displays a button to create account, and 
+//redirects to congratulations page if login is successful
 export const Login = (props) => {
 
     const [username, setUsername] = useState('');
@@ -11,7 +12,7 @@ export const Login = (props) => {
     const [pass, setPass] = useState('');
     const [openModal, setOpenModal] = useState(false);
 
-
+    // function to handle form submission
     const handleSubmit = (e)=> {
 
         e.preventDefault();
@@ -46,7 +47,9 @@ export const Login = (props) => {
             
     }
 
+
     return (
+        // html structure for login page. uses react form for submission
         <div className="auth-form-container">        
             <form className = "login-form" onSubmit={handleSubmit}>
                 <h1>Login</h1> 
