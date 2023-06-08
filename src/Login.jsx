@@ -50,7 +50,8 @@ export const Login = (props) => {
 
     return (
         // html structure for login page. uses react form for submission
-        <div className="auth-form-container">        
+        <div className="auth-form-container">
+            <h5>** Note: This site is for exposition purposes only.  Login info is not secure.**</h5>        
             <form className = "login-form" onSubmit={handleSubmit}>
                 <h1>Login</h1> 
                 <label htmlFor="username">username</label>
